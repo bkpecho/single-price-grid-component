@@ -16,6 +16,7 @@ html {
 
 body {
   min-height: 100vh;
+  background-color: rgb(221, 234, 243);
 }
 
 .component {
@@ -24,16 +25,18 @@ body {
   gap: 0;
   margin: 2rem;
   max-width: 375px;
-  border: 1px solid red;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .community {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1.5rem;
   font-weight: bold;
   line-height: 1.5rem;
+  background-color: white;
 }
 .community__title {
   color: hsl(179, 62%, 43%);
@@ -51,7 +54,7 @@ body {
 .subscription {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1.5rem;
   background-color: hsl(179, 62%, 43%);
 }
@@ -83,4 +86,23 @@ body {
   background-color: hsl(71, 73%, 54%);
   padding: 1rem 0;
   box-shadow: 0 8px 13px 1px rgba(0, 0, 0, 0.2);
+}
+
+.why-us {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: rgba(42, 178, 175, 0.8);
+}
+.why-us__title {
+  font-size: 1.15rem;
+  color: hsl(204, 43%, 93%);
+  font-weight: 700;
+}
+.why-us__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: rgba(229, 239, 245, 0.8);
 }/*# sourceMappingURL=style.css.map */

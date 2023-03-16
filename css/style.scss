@@ -1,0 +1,124 @@
+//# Front-end Style Guide
+
+/* ## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+ */
+
+//  ## Colors
+
+// ### Primary
+
+$primary-cyan: hsl(179, 62%, 43%);
+$primary-yellow: hsl(71, 73%, 54%);
+
+// ### Neutral
+
+$neutral-light: hsl(204, 43%, 93%);
+$neutral-gray: hsl(218, 22%, 67%);
+
+// ## Typography
+
+// ### Body Copy
+
+$fs-base: 16px;
+
+// ### Font
+
+$ff-base: 'Karla', sans-serif;
+
+$fw-regular: 400;
+$fw-bold: 700;
+
+// mixins
+
+@mixin flex($direction, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+* {
+  font-family: $ff-base;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $fs-base;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.component {
+  @include flex(column, 0);
+  margin: 2rem;
+  max-width: 375px;
+
+  border: 1px solid red;
+}
+
+.community {
+  @include flex(column, 1rem);
+  padding: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+
+  &__title {
+    color: $primary-cyan;
+    font-size: 1.25rem;
+  }
+
+  &__text {
+    color: $primary-yellow;
+  }
+
+  &__paragraph {
+    color: $neutral-gray;
+    font-size: 0.85rem;
+    font-weight: $fw-regular;
+  }
+}
+
+.subscription {
+  @include flex(column, 1rem);
+  padding: 1.5rem;
+  background-color: $primary-cyan;
+
+  &__title {
+    color: $neutral-light;
+    font-size: 1.15rem;
+    font-weight: $fw-bold;
+  }
+
+  &__price {
+    @include flex(row, 1rem);
+    align-items: center;
+    color: rgba($neutral-light, 0.7);
+  }
+
+  &__twenty-nine {
+    color: $neutral-light;
+    font-size: 2rem;
+    font-weight: $fw-bold;
+  }
+
+  &__text {
+    color: $neutral-light;
+  }
+
+  &__button {
+    border-radius: 0.25rem;
+    text-align: center;
+    font-weight: $fw-bold;
+    color: white;
+    background-color: $primary-yellow;
+    padding: 1rem 0;
+
+    box-shadow: 0 8px 13px 1px rgba(black, 0.2);
+  }
+}

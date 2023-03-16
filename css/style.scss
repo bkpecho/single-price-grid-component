@@ -61,11 +61,12 @@ body {
 
   border: 1px solid red;
 }
+
 .community {
   @include flex(column, 1rem);
+  padding: 1.5rem;
   font-weight: bold;
   line-height: 1.5rem;
-  padding: 1.5rem;
 
   &__title {
     color: $primary-cyan;
@@ -80,5 +81,44 @@ body {
     color: $neutral-gray;
     font-size: 0.85rem;
     font-weight: $fw-regular;
+  }
+}
+
+.subscription {
+  @include flex(column, 1rem);
+  padding: 1.5rem;
+  background-color: $primary-cyan;
+
+  &__title {
+    color: $neutral-light;
+    font-size: 1.15rem;
+    font-weight: $fw-bold;
+  }
+
+  &__price {
+    @include flex(row, 1rem);
+    align-items: center;
+    color: rgba($neutral-light, 0.7);
+  }
+
+  &__twenty-nine {
+    color: $neutral-light;
+    font-size: 2rem;
+    font-weight: $fw-bold;
+  }
+
+  &__text {
+    color: $neutral-light;
+  }
+
+  &__button {
+    border-radius: 0.25rem;
+    text-align: center;
+    font-weight: $fw-bold;
+    color: white;
+    background-color: $primary-yellow;
+    padding: 1rem 0;
+
+    box-shadow: 0 8px 13px 1px rgba(black, 0.2);
   }
 }

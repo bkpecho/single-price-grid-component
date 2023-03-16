@@ -52,6 +52,7 @@ html {
 
 body {
   min-height: 100vh;
+  background-color: rgb(221, 234, 243);
 }
 
 .component {
@@ -59,14 +60,16 @@ body {
   margin: 2rem;
   max-width: 375px;
 
-  border: 1px solid red;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .community {
-  @include flex(column, 1rem);
+  @include flex(column, 1.5rem);
   padding: 1.5rem;
   font-weight: bold;
   line-height: 1.5rem;
+  background-color: white;
 
   &__title {
     color: $primary-cyan;
@@ -85,7 +88,7 @@ body {
 }
 
 .subscription {
-  @include flex(column, 1rem);
+  @include flex(column, 1.5rem);
   padding: 1.5rem;
   background-color: $primary-cyan;
 
@@ -120,5 +123,22 @@ body {
     padding: 1rem 0;
 
     box-shadow: 0 8px 13px 1px rgba(black, 0.2);
+  }
+}
+
+.why-us {
+  @include flex((column), 1rem);
+  padding: 1.5rem;
+  background-color: rgba($primary-cyan, 0.8);
+
+  &__title {
+    font-size: 1.15rem;
+    color: $neutral-light;
+    font-weight: $fw-bold;
+  }
+
+  &__list {
+    @include flex(column, 0.5rem);
+    color: rgba($neutral-light, 0.8);
   }
 }

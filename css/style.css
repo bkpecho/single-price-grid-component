@@ -115,6 +115,9 @@ body {
   gap: 0.5rem;
   color: rgba(229, 239, 245, 0.8);
 }
+.why-us__item {
+  font-size: 0.85rem;
+}
 
 @media screen and (min-width: 800px) {
   .component {

@@ -149,6 +149,10 @@ body {
     @include flex(column, 0.5rem);
     color: rgba($neutral-light, 0.8);
   }
+
+  &__item {
+    font-size: 0.85rem;
+  }
 }
 
 @media screen and (min-width: 800px) {

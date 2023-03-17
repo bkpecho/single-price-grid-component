@@ -15,6 +15,11 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   background-color: rgb(221, 234, 243);
 }
@@ -86,6 +91,10 @@ body {
   background-color: hsl(71, 73%, 54%);
   padding: 1rem 0;
   box-shadow: 0 8px 13px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.subscription__button:active {
+  background-color: rgba(192, 223, 52, 0.8);
 }
 
 .why-us {
@@ -105,4 +114,23 @@ body {
   flex-direction: column;
   gap: 0.5rem;
   color: rgba(229, 239, 245, 0.8);
+}
+
+@media screen and (min-width: 800px) {
+  .component {
+    max-width: 700px !important;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+  }
+  .container section {
+    flex: 1;
+  }
+  .community,
+  .subscription,
+  .why-us {
+    padding: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */

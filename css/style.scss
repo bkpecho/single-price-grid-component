@@ -51,6 +51,9 @@ html {
 }
 
 body {
+  @include flex(column, 0);
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   background-color: rgb(221, 234, 243);
 }
@@ -123,6 +126,11 @@ body {
     padding: 1rem 0;
 
     box-shadow: 0 8px 13px 1px rgba(black, 0.2);
+    cursor: pointer;
+
+    &:active {
+      background-color: rgba($primary-yellow, 0.8);
+    }
   }
 }
 
@@ -140,5 +148,23 @@ body {
   &__list {
     @include flex(column, 0.5rem);
     color: rgba($neutral-light, 0.8);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .component {
+    max-width: 700px !important;
+  }
+  .container {
+    @include flex(row, 0);
+    & section {
+      flex: 1;
+    }
+  }
+
+  .community,
+  .subscription,
+  .why-us {
+    padding: 2rem;
   }
 }
